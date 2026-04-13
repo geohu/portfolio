@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthTrack — George Hu</title>
+  <meta name="description" content="Case study: HealthTrack Patient Portal redesign by George Hu." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #0EA5E9 0%, #0369A1 60%, #075985 100%); }
+    .accent-color { color: #0EA5E9; }
+    .accent-bg { background: #F0F9FF; border-color: #BAE6FD; }
+    .step-active .process-step__num { background: #0EA5E9; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav__logo">George <em>Hu</em></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="case-hero hero-bg">
+    <div class="case-hero__content container">
+      <div class="case-hero__tags">
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">Healthcare</span>
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">Mobile App</span>
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">iOS &amp; Android</span>
+      </div>
+      <h1 class="case-hero__title">HealthTrack Patient Portal</h1>
+      <p class="case-hero__summary">
+        Redesigning a fragmented, low-rated patient app into a cohesive, accessible experience that patients actually want to use — resulting in a 38% drop in appointment abandonment and a 4.7★ App Store rating.
+      </p>
+    </div>
+  </section>
+
+  <!-- Meta Strip -->
+  <div class="case-meta">
+    <div class="container">
+      <div class="case-meta__grid">
+        <div class="case-meta__item">
+          <p class="case-meta__label">My Role</p>
+          <p class="case-meta__value">Lead UX Designer</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Timeline</p>
+          <p class="case-meta__value">Jan – Aug 2024 (8 months)</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Team</p>
+          <p class="case-meta__value">1 UX Designer, 2 Engineers, 1 PM</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Tools</p>
+          <p class="case-meta__value">Figma, Maze, UserZoom</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Platform</p>
+          <p class="case-meta__value">iOS &amp; Android</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <main class="case-body">
+    <div class="container">
+      <div style="max-width:var(--max-w);margin:0 auto;">
+
+        <!-- Design Process -->
+        <div class="case-section reveal">
+          <p class="case-section__num">Process Overview</p>
+          <h2 class="case-section__title">How I Approached This</h2>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">1</div>
+              <p class="process-step__label">Discover</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">2</div>
+              <p class="process-step__label">Research</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">3</div>
+              <p class="process-step__label">Define</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">4</div>
+              <p class="process-step__label">Ideate</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">5</div>
+              <p class="process-step__label">Prototype</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">6</div>
+              <p class="process-step__label">Test</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#0EA5E9;">7</div>
+              <p class="process-step__label">Ship</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 01 The Problem -->
+        <div class="case-section reveal">
+          <p class="case-section__num">01 — The Problem</p>
+          <h2 class="case-section__title">A portal patients avoided using</h2>
+          <div class="two-col">
+            <div class="case-section__body">
+              <p>HealthTrack's patient portal had been built piecemeal over six years, with features bolted on by different teams without a unified design vision. The result was an app that patients found confusing, slow, and untrustworthy — especially when it came to managing appointments and reviewing test results.</p>
+              <p>The business was seeing a 44% appointment booking abandonment rate through the app, with support tickets flooding in about "can't find my results" and "the app logged me out mid-booking." The App Store rating had fallen to 2.9★.</p>
+            </div>
+            <div>
+              <div class="insight-grid" style="grid-template-columns:1fr 1fr;margin-top:0;">
+                <div class="insight-card" style="border-color:#FCA5A5;background:#FFF5F5;">
+                  <div class="insight-card__icon">📉</div>
+                  <div class="insight-card__title">2.9★ rating</div>
+                  <div class="insight-card__text">App Store reviews cited confusing navigation and frequent crashes</div>
+                </div>
+                <div class="insight-card" style="border-color:#FCA5A5;background:#FFF5F5;">
+                  <div class="insight-card__icon">🚪</div>
+                  <div class="insight-card__title">44% drop-off</div>
+                  <div class="insight-card__text">Nearly half of users abandoned the appointment booking flow</div>
+                </div>
+                <div class="insight-card" style="border-color:#FCA5A5;background:#FFF5F5;">
+                  <div class="insight-card__icon">📞</div>
+                  <div class="insight-card__title">↑ 62% support calls</div>
+                  <div class="insight-card__text">Year-over-year increase in app-related support tickets</div>
+                </div>
+                <div class="insight-card" style="border-color:#FCA5A5;background:#FFF5F5;">
+                  <div class="insight-card__icon">⌛</div>
+                  <div class="insight-card__title">8+ taps to book</div>
+                  <div class="insight-card__text">The appointment booking flow required at least 8 taps to complete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Research -->
+        <div class="case-section reveal">
+          <p class="case-section__num">02 — Research & Discovery</p>
+          <h2 class="case-section__title">Listening before designing</h2>
+          <div class="case-section__body">
+            <p>I began with a two-week discovery sprint. I conducted 18 contextual interviews with patients across age groups, reviewed 6 months of App Store reviews and support tickets, and ran a heuristic evaluation of the existing app against Nielsen's usability heuristics.</p>
+            <p>I also shadowed two patient coordinators at a clinic to observe how patients used — or avoided using — the app during real appointments. This gave me crucial context that interviews alone wouldn't surface.</p>
+          </div>
+
+          <div class="pull-quote" style="border-color:#0EA5E9;background:#F0F9FF;">
+            <p>"I just call the clinic directly now. I tried the app twice and it made me feel like I'd done something wrong."</p>
+            <cite>— Patient interview participant, age 58</cite>
+          </div>
+
+          <div class="insight-grid">
+            <div class="insight-card">
+              <div class="insight-card__icon">🔍</div>
+              <div class="insight-card__title">18 User Interviews</div>
+              <div class="insight-card__text">Patients aged 24–72, spanning tech-savvy to tech-hesitant users</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">📋</div>
+              <div class="insight-card__title">Heuristic Evaluation</div>
+              <div class="insight-card__text">34 usability issues identified across 10 Nielsen heuristics</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">📊</div>
+              <div class="insight-card__title">Analytics Review</div>
+              <div class="insight-card__text">6 months of Mixpanel data revealed 3 critical drop-off points</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">👥</div>
+              <div class="insight-card__title">Clinic Shadowing</div>
+              <div class="insight-card__text">2 days observing patient coordinators and patient interactions</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 Define -->
+        <div class="case-section reveal">
+          <p class="case-section__num">03 — Define</p>
+          <h2 class="case-section__title">Synthesising what we learned</h2>
+          <div class="case-section__body">
+            <p>After research synthesis, three core user needs emerged clearly. Patients needed to quickly understand what actions they needed to take. They needed to trust the system with their health data. And they needed to complete tasks in one go — without confusion or dead ends forcing them to call the clinic instead.</p>
+            <p>I defined two primary personas: "Active Anya," a 34-year-old managing a chronic condition who needed frequent app use, and "Occasional Oliver," a 61-year-old who only used the app for annual checkups and needed the experience to be self-explanatory every time.</p>
+          </div>
+
+          <!-- Persona cards -->
+          <div class="two-col" style="margin-top:2.5rem;">
+            <div class="insight-card" style="padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">👩‍💼</div>
+              <h3 style="margin-bottom:0.5rem;">Active Anya, 34</h3>
+              <p class="tag" style="margin-bottom:1rem;background:#E0F2FE;color:#0369A1;border-color:#BAE6FD;">Frequent User</p>
+              <p class="insight-card__text">Manages Type 2 diabetes. Uses the app weekly to log vitals, review lab results, and message her care team. Frustrated by inconsistent navigation and a home screen that never changes despite her frequent use.</p>
+              <p class="insight-card__text" style="margin-top:0.75rem;"><strong>Goal:</strong> Get to her data fast, without re-learning the app each visit.</p>
+            </div>
+            <div class="insight-card" style="padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">👨</div>
+              <h3 style="margin-bottom:0.5rem;">Occasional Oliver, 61</h3>
+              <p class="tag" style="margin-bottom:1rem;">Infrequent User</p>
+              <p class="insight-card__text">Comes in once a year for a physical. Needs to book appointments, review results, and pay his copay. Forgets how the app works between visits and finds the information density overwhelming.</p>
+              <p class="insight-card__text" style="margin-top:0.75rem;"><strong>Goal:</strong> Complete a specific task quickly without getting lost or anxious.</p>
+            </div>
+          </div>
+
+          <div class="pull-quote" style="margin-top:2.5rem;border-color:#0EA5E9;background:#F0F9FF;">
+            <p>How might we help patients feel in control of their health journey — so the app becomes a trusted companion rather than a confusing barrier?</p>
+            <cite>— Problem Statement</cite>
+          </div>
+        </div>
+
+        <!-- 04 Ideate -->
+        <div class="case-section reveal">
+          <p class="case-section__num">04 — Ideate</p>
+          <h2 class="case-section__title">From concepts to direction</h2>
+          <div class="case-section__body">
+            <p>I ran two design studio sessions with the PM and engineers to rapidly sketch solutions. I generated over 60 concept sketches across three how-might-we questions, then dot-voted with the team to identify the most promising directions.</p>
+            <p>Three key design directions emerged: a "Today" home screen that surfaces only what's urgent and actionable; a simplified appointment booking flow condensed from 8 steps to 3; and a results view designed to reduce anxiety by leading with plain-language summaries before technical values.</p>
+          </div>
+
+          <!-- Wireframe mockup -->
+          <div class="mockup-frame" style="max-width:680px;">
+            <div class="mockup-frame__bar">
+              <div class="mockup-frame__dot" style="background:#FF5F57;"></div>
+              <div class="mockup-frame__dot" style="background:#FFBD2E;"></div>
+              <div class="mockup-frame__dot" style="background:#28C840;"></div>
+              <span style="margin-left:0.75rem;font-size:0.75rem;color:var(--text-3);">HealthTrack — Wireframes v3</span>
+            </div>
+            <div class="mockup-frame__content" style="padding:2rem;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem;">
+              <!-- Screen 1: Home -->
+              <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:0.75rem;aspect-ratio:9/16;display:flex;flex-direction:column;gap:0.5rem;">
+                <div style="height:6px;background:#E5E7EB;border-radius:3px;width:60%;"></div>
+                <div style="height:4px;background:#E5E7EB;border-radius:2px;width:40%;"></div>
+                <div style="height:36px;background:#F0F9FF;border-radius:6px;border:1px solid #BAE6FD;"></div>
+                <div style="height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                <div style="height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                <div style="height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                <div style="flex:1;"></div>
+                <div style="display:flex;gap:4px;">
+                  <div style="flex:1;height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                  <div style="flex:1;height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                  <div style="flex:1;height:20px;background:#F3F4F6;border-radius:4px;"></div>
+                </div>
+              </div>
+              <!-- Screen 2: Book -->
+              <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:0.75rem;aspect-ratio:9/16;display:flex;flex-direction:column;gap:0.5rem;">
+                <div style="height:5px;background:#E5E7EB;border-radius:2px;width:30%;margin-bottom:0.25rem;"></div>
+                <div style="height:6px;background:#0EA5E9;border-radius:3px;width:100%;"></div>
+                <div style="height:50px;background:#F3F4F6;border-radius:6px;display:flex;align-items:center;justify-content:center;">
+                  <div style="width:28px;height:28px;border-radius:50%;background:#E5E7EB;"></div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;">
+                  <div style="height:16px;background:#F0F9FF;border-radius:3px;border:1px solid #BAE6FD;"></div>
+                  <div style="height:16px;background:#F0F9FF;border-radius:3px;border:1px solid #BAE6FD;"></div>
+                  <div style="height:16px;background:#0EA5E9;border-radius:3px;"></div>
+                </div>
+                <div style="flex:1;"></div>
+                <div style="height:24px;background:#0EA5E9;border-radius:100px;"></div>
+              </div>
+              <!-- Screen 3: Results -->
+              <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:0.75rem;aspect-ratio:9/16;display:flex;flex-direction:column;gap:0.5rem;">
+                <div style="height:5px;background:#E5E7EB;border-radius:2px;width:30%;"></div>
+                <div style="height:6px;background:#E5E7EB;border-radius:3px;width:70%;"></div>
+                <div style="height:28px;background:#F0FDF4;border-radius:6px;border:1px solid #BBF7D0;display:flex;align-items:center;padding:0 6px;gap:4px;">
+                  <div style="width:8px;height:8px;border-radius:50%;background:#22C55E;"></div>
+                  <div style="height:4px;background:#86EFAC;border-radius:2px;flex:1;"></div>
+                </div>
+                <div style="height:14px;background:#F3F4F6;border-radius:3px;"></div>
+                <div style="height:14px;background:#F3F4F6;border-radius:3px;width:80%;"></div>
+                <div style="height:14px;background:#F3F4F6;border-radius:3px;width:90%;"></div>
+                <div style="flex:1;"></div>
+                <div style="height:20px;background:#F3F4F6;border-radius:4px;"></div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:0.8rem;color:var(--text-3);margin-top:-1rem;margin-bottom:0;">Low-fidelity wireframes: Home "Today" view, 3-step appointment booking, and plain-language results.</p>
+        </div>
+
+        <!-- 05 Prototype & Test -->
+        <div class="case-section reveal">
+          <p class="case-section__num">05 — Prototype & Test</p>
+          <h2 class="case-section__title">Validating before building</h2>
+          <div class="case-section__body">
+            <p>I built a mid-fidelity interactive prototype in Figma covering the three primary flows: onboarding, appointment booking, and results viewing. I ran two rounds of moderated usability tests — six participants each — using UserZoom for remote sessions and Maze for unmoderated click-path analysis.</p>
+            <p>Round one surfaced a critical issue: the "Today" home screen was missing a clear way to access past appointments, leading 4 of 6 participants to get lost when trying to find previous visit notes. I iterated quickly and the second round showed a 94% task completion rate across all three flows.</p>
+          </div>
+
+          <div class="insight-grid" style="margin-top:2rem;">
+            <div class="insight-card">
+              <div class="insight-card__icon">🔁</div>
+              <div class="insight-card__title">2 Rounds of Testing</div>
+              <div class="insight-card__text">12 total participants, mix of ages 24–70</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">✅</div>
+              <div class="insight-card__title">94% Task Completion</div>
+              <div class="insight-card__text">Up from 48% on the original app with the same tasks</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">🐛</div>
+              <div class="insight-card__title">11 Issues Found</div>
+              <div class="insight-card__text">7 fixed before handoff; 4 deferred to post-launch</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">⏱️</div>
+              <div class="insight-card__title">3.1 avg taps to book</div>
+              <div class="insight-card__text">Down from 8+ in the original flow</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 Final Design -->
+        <div class="case-section reveal">
+          <p class="case-section__num">06 — Final Design</p>
+          <h2 class="case-section__title">A portal patients want to open</h2>
+          <div class="case-section__body">
+            <p>The final design established a clear visual hierarchy anchored around the patient's immediate needs. The home screen surfaces upcoming appointments, unread results, and any pending actions — nothing more. Navigation is persistent and clear. The booking flow is three steps, and the results view leads with a plain-English summary before presenting any numbers.</p>
+            <p>I also built a comprehensive component library in Figma to support the engineering team and ensure consistency across future feature additions — covering 84 components across 12 categories, all with built-in accessibility tokens.</p>
+          </div>
+
+          <!-- Final design mockup -->
+          <div class="mockup-frame">
+            <div class="mockup-frame__bar">
+              <div class="mockup-frame__dot" style="background:#FF5F57;"></div>
+              <div class="mockup-frame__dot" style="background:#FFBD2E;"></div>
+              <div class="mockup-frame__dot" style="background:#28C840;"></div>
+              <span style="margin-left:0.75rem;font-size:0.75rem;color:var(--text-3);">HealthTrack — Final Designs</span>
+            </div>
+            <div class="mockup-frame__content" style="padding:2.5rem;background:#F0F9FF;">
+              <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+                <!-- Final phone mockup 1 -->
+                <div style="width:160px;background:linear-gradient(135deg,#0EA5E9,#0369A1);border-radius:24px;padding:12px;box-shadow:0 20px 60px rgba(14,165,233,0.3);">
+                  <div style="background:#fff;border-radius:16px;overflow:hidden;">
+                    <div style="background:#0EA5E9;padding:16px 12px 12px;color:#fff;">
+                      <div style="font-size:9px;opacity:0.7;margin-bottom:4px;">Monday, Mar 12</div>
+                      <div style="font-size:11px;font-weight:600;">Good morning, Anya</div>
+                    </div>
+                    <div style="padding:10px;display:flex;flex-direction:column;gap:8px;">
+                      <div style="background:#F0F9FF;border-radius:8px;padding:8px;border-left:3px solid #0EA5E9;">
+                        <div style="font-size:8px;font-weight:600;color:#0369A1;">UPCOMING</div>
+                        <div style="font-size:9px;color:#1e3a5f;margin-top:2px;">Dr. Patel · Thu Mar 15</div>
+                      </div>
+                      <div style="background:#F0FDF4;border-radius:8px;padding:8px;border-left:3px solid #22C55E;">
+                        <div style="font-size:8px;font-weight:600;color:#166534;">NEW RESULT</div>
+                        <div style="font-size:9px;color:#1e3a5f;margin-top:2px;">Blood panel · All normal</div>
+                      </div>
+                      <div style="height:24px;background:#0EA5E9;border-radius:100px;display:flex;align-items:center;justify-content:center;">
+                        <span style="font-size:8px;color:#fff;font-weight:600;">Book Appointment</span>
+                      </div>
+                    </div>
+                    <div style="border-top:1px solid #f0f0f0;padding:8px;display:flex;justify-content:space-around;">
+                      <div style="width:20px;height:20px;background:#E8F5FF;border-radius:6px;"></div>
+                      <div style="width:20px;height:20px;background:#E8F5FF;border-radius:6px;"></div>
+                      <div style="width:20px;height:20px;background:#E8F5FF;border-radius:6px;"></div>
+                      <div style="width:20px;height:20px;background:#E8F5FF;border-radius:6px;"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Final phone mockup 2 -->
+                <div style="width:160px;background:linear-gradient(135deg,#0EA5E9,#0369A1);border-radius:24px;padding:12px;box-shadow:0 20px 60px rgba(14,165,233,0.25);margin-top:30px;">
+                  <div style="background:#fff;border-radius:16px;overflow:hidden;">
+                    <div style="background:#F8FAFC;padding:12px;border-bottom:1px solid #f0f0f0;">
+                      <div style="font-size:9px;color:var(--text-3);margin-bottom:4px;">Step 2 of 3</div>
+                      <div style="font-size:11px;font-weight:600;">Choose a time</div>
+                      <div style="display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;">
+                        <div style="padding:3px 6px;background:#0EA5E9;border-radius:100px;"><span style="font-size:7px;color:#fff;">9:00 AM</span></div>
+                        <div style="padding:3px 6px;background:#F0F9FF;border-radius:100px;border:1px solid #BAE6FD;"><span style="font-size:7px;color:#0369A1;">11:30 AM</span></div>
+                        <div style="padding:3px 6px;background:#F0F9FF;border-radius:100px;border:1px solid #BAE6FD;"><span style="font-size:7px;color:#0369A1;">2:00 PM</span></div>
+                      </div>
+                    </div>
+                    <div style="padding:10px;display:flex;flex-direction:column;gap:6px;">
+                      <div style="font-size:8px;color:var(--text-3);">With Dr. Patel, Primary Care</div>
+                      <div style="font-size:8px;color:var(--text-2);">📍 Main Street Clinic</div>
+                      <div style="height:24px;background:#0EA5E9;border-radius:100px;display:flex;align-items:center;justify-content:center;margin-top:4px;">
+                        <span style="font-size:8px;color:#fff;font-weight:600;">Confirm Booking →</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Final phone mockup 3 -->
+                <div style="width:160px;background:linear-gradient(135deg,#0EA5E9,#0369A1);border-radius:24px;padding:12px;box-shadow:0 20px 60px rgba(14,165,233,0.2);">
+                  <div style="background:#fff;border-radius:16px;overflow:hidden;">
+                    <div style="background:#F0FDF4;padding:12px;border-bottom:1px solid #DCF2E8;">
+                      <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;">
+                        <div style="width:12px;height:12px;border-radius:50%;background:#22C55E;"></div>
+                        <div style="font-size:9px;font-weight:600;color:#166534;">All values look normal</div>
+                      </div>
+                      <div style="font-size:8px;color:#166534;opacity:0.8;">Blood Panel · Mar 10, 2024</div>
+                    </div>
+                    <div style="padding:10px;display:flex;flex-direction:column;gap:6px;">
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #f5f5f5;">
+                        <span style="font-size:8px;color:#333;">Glucose</span>
+                        <span style="font-size:8px;font-weight:600;color:#166534;">92 mg/dL ✓</span>
+                      </div>
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid #f5f5f5;">
+                        <span style="font-size:8px;color:#333;">HbA1c</span>
+                        <span style="font-size:8px;font-weight:600;color:#166534;">5.8% ✓</span>
+                      </div>
+                      <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 0;">
+                        <span style="font-size:8px;color:#333;">Cholesterol</span>
+                        <span style="font-size:8px;font-weight:600;color:#166534;">178 ✓</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 07 Outcomes -->
+        <div class="case-section reveal">
+          <p class="case-section__num">07 — Outcomes</p>
+          <h2 class="case-section__title">Results after launch</h2>
+          <div class="case-section__body">
+            <p>The redesigned app launched in August 2024. Within 90 days of release, the numbers told a clear story about the impact of putting user needs at the center of the design process.</p>
+          </div>
+
+          <div class="insight-grid" style="margin-top:2rem;">
+            <div class="insight-card" style="border-color:#BAE6FD;background:#F0F9FF;">
+              <div class="insight-card__icon">⭐</div>
+              <div class="insight-card__title">4.7★ App Store rating</div>
+              <div class="insight-card__text">Up from 2.9★ — more 5★ reviews in 30 days than the previous 6 months combined</div>
+            </div>
+            <div class="insight-card" style="border-color:#BAE6FD;background:#F0F9FF;">
+              <div class="insight-card__icon">📅</div>
+              <div class="insight-card__title">38% less drop-off</div>
+              <div class="insight-card__text">Appointment abandonment fell from 44% to 6% within 60 days</div>
+            </div>
+            <div class="insight-card" style="border-color:#BAE6FD;background:#F0F9FF;">
+              <div class="insight-card__icon">📞</div>
+              <div class="insight-card__title">−47% support calls</div>
+              <div class="insight-card__text">Significant reduction in app-related support tickets within the first month</div>
+            </div>
+            <div class="insight-card" style="border-color:#BAE6FD;background:#F0F9FF;">
+              <div class="insight-card__icon">👆</div>
+              <div class="insight-card__title">+29% DAU</div>
+              <div class="insight-card__text">Daily active users increased as patients began trusting the app to manage their care</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08 Reflection -->
+        <div class="case-section reveal">
+          <p class="case-section__num">08 — Reflection</p>
+          <h2 class="case-section__title">What I'd do differently</h2>
+          <div class="case-section__body">
+            <p>If I were starting over, I'd involve the engineering team in the research synthesis phase earlier. There were a few design decisions that required significant re-work once the engineers pointed out underlying system constraints — constraints that, had I known about them earlier, would have led me toward equally good but simpler solutions.</p>
+            <p>I'd also invest more time in the onboarding experience for infrequent users like Oliver. The post-launch data showed that users who only opened the app a few times a year still struggled during those visits — an area we've since prioritised in the roadmap.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Next Project -->
+  <a href="project-waypoint.html" class="next-project">
+    <p class="next-project__label">Next Project</p>
+    <p class="next-project__title">Waypoint Travel Planner <span class="next-project__arrow">→</span></p>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 George Hu. Designed with care.</p>
+      <ul class="footer__links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Dribbble</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

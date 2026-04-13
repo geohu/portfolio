@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Dashboard — George Hu</title>
+  <meta name="description" content="Case study: Nexus Analytics Dashboard redesign by George Hu." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 60%, #4C1D95 100%); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav__logo">George <em>Hu</em></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html" class="active">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="case-hero hero-bg">
+    <div class="case-hero__content container">
+      <div class="case-hero__tags">
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">Enterprise B2B</span>
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">Data Dashboard</span>
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">2023</span>
+      </div>
+      <h1 class="case-hero__title">Nexus Analytics Dashboard</h1>
+      <p class="case-hero__summary">
+        Untangling a legacy analytics platform that 600 data analysts dreaded opening — redesigning the information architecture from scratch and cutting average task time by 52% within 60 days of launch.
+      </p>
+    </div>
+  </section>
+
+  <!-- Meta -->
+  <div class="case-meta">
+    <div class="container">
+      <div class="case-meta__grid">
+        <div class="case-meta__item">
+          <p class="case-meta__label">My Role</p>
+          <p class="case-meta__value">Senior UX Designer</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Timeline</p>
+          <p class="case-meta__value">Feb – Oct 2023 (9 months)</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Team</p>
+          <p class="case-meta__value">2 Designers, 6 Engineers, 2 PMs</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Tools</p>
+          <p class="case-meta__value">Figma, FullStory, Hotjar</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Platform</p>
+          <p class="case-meta__value">Web (Desktop-first)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <main class="case-body">
+    <div class="container">
+      <div style="max-width:var(--max-w);margin:0 auto;">
+
+        <!-- Process -->
+        <div class="case-section reveal">
+          <p class="case-section__num">Process Overview</p>
+          <h2 class="case-section__title">Designing for experts</h2>
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">1</div>
+              <p class="process-step__label">Audit</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">2</div>
+              <p class="process-step__label">Research</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">3</div>
+              <p class="process-step__label">IA Design</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">4</div>
+              <p class="process-step__label">Components</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">5</div>
+              <p class="process-step__label">Prototype</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">6</div>
+              <p class="process-step__label">Handoff</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step__num" style="background:#8B5CF6;">7</div>
+              <p class="process-step__label">Launch</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 01 Context -->
+        <div class="case-section reveal">
+          <p class="case-section__num">01 — Context & Problem</p>
+          <h2 class="case-section__title">A powerful tool no one wanted to open</h2>
+          <div class="case-section__body">
+            <p>Nexus was a data analytics platform used by 600+ data analysts across a large retail enterprise. The underlying data and computation engine were genuinely powerful. But years of feature additions by multiple teams had left the UI in disarray — a tangled web of nested menus, inconsistent components, and dashboards that loaded slowly and disclosed information poorly.</p>
+            <p>Analysts were working around the tool: exporting raw data into Excel, building shadow dashboards in Tableau, or simply asking colleagues to run queries on their behalf. Productivity was suffering, and the platform team was fielding a growing backlog of complaints.</p>
+          </div>
+
+          <div class="insight-grid">
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">🐌</div>
+              <div class="insight-card__title">18 min avg task time</div>
+              <div class="insight-card__text">To complete a standard query and export — a task that should take 3–4 minutes</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">📤</div>
+              <div class="insight-card__title">73% exported raw data</div>
+              <div class="insight-card__text">Analysts bypassed the dashboard entirely, exporting to Excel to do analysis</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">🗺️</div>
+              <div class="insight-card__title">340 navigation items</div>
+              <div class="insight-card__text">The global nav had 340 individual items across 7 nesting levels</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">😤</div>
+              <div class="insight-card__title">CSAT of 24%</div>
+              <div class="insight-card__text">Customer satisfaction score — bottom quartile among internal tools at the company</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 Research -->
+        <div class="case-section reveal">
+          <p class="case-section__num">02 — Research</p>
+          <h2 class="case-section__title">Understanding expert mental models</h2>
+          <div class="case-section__body">
+            <p>Enterprise UX research is different. Users are domain experts who've built deep (often dysfunctional) habits around existing tools. The risk is designing something "better" in theory but that breaks established workflows. I spent the first six weeks doing deep contextual research before touching a single wireframe.</p>
+            <p>I ran 26 contextual inquiry sessions — sitting beside analysts while they worked — and supplemented this with FullStory session recordings, a IA card sorting exercise with 40 participants, and a tree testing exercise to validate navigation hypotheses before committing to them.</p>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h3 style="margin-bottom:1.25rem;">Research methods</h3>
+              <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                <div style="display:flex;gap:0.75rem;align-items:center;padding:0.9rem 1rem;border:1px solid var(--border);border-radius:10px;">
+                  <span style="font-size:1.25rem;">🔍</span>
+                  <div>
+                    <p style="font-size:0.88rem;font-weight:600;margin-bottom:0.1rem;">Contextual Inquiry</p>
+                    <p style="font-size:0.8rem;color:var(--text-2);">26 sessions, watching analysts work in real context</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:0.75rem;align-items:center;padding:0.9rem 1rem;border:1px solid var(--border);border-radius:10px;">
+                  <span style="font-size:1.25rem;">🃏</span>
+                  <div>
+                    <p style="font-size:0.88rem;font-weight:600;margin-bottom:0.1rem;">Card Sorting</p>
+                    <p style="font-size:0.8rem;color:var(--text-2);">40 participants, open + closed sessions to map mental models</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:0.75rem;align-items:center;padding:0.9rem 1rem;border:1px solid var(--border);border-radius:10px;">
+                  <span style="font-size:1.25rem;">🌳</span>
+                  <div>
+                    <p style="font-size:0.88rem;font-weight:600;margin-bottom:0.1rem;">Tree Testing</p>
+                    <p style="font-size:0.8rem;color:var(--text-2);">Validated new IA with 80 analysts before designing UI</p>
+                  </div>
+                </div>
+                <div style="display:flex;gap:0.75rem;align-items:center;padding:0.9rem 1rem;border:1px solid var(--border);border-radius:10px;">
+                  <span style="font-size:1.25rem;">📹</span>
+                  <div>
+                    <p style="font-size:0.88rem;font-weight:600;margin-bottom:0.1rem;">Session Recordings</p>
+                    <p style="font-size:0.8rem;color:var(--text-2);">200+ FullStory recordings reviewed for rage-click and dead-end patterns</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="pull-quote" style="border-color:#8B5CF6;background:#FAF5FF;margin:0 0 1.5rem;">
+                <p>"I know the data I need is in there. I just can't find it fast enough to be useful in a meeting."</p>
+                <cite>— Senior Data Analyst, contextual interview</cite>
+              </div>
+              <div class="pull-quote" style="border-color:#8B5CF6;background:#FAF5FF;margin:0;">
+                <p>"I have a cheat sheet of 12 menu paths I use every day. Without it, I'd be lost."</p>
+                <cite>— Analytics Manager, contextual interview</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 IA Design -->
+        <div class="case-section reveal">
+          <p class="case-section__num">03 — Information Architecture</p>
+          <h2 class="case-section__title">From 340 nav items to 24</h2>
+          <div class="case-section__body">
+            <p>The IA redesign was the highest-leverage single decision of the project. Based on card sort analysis, I reorganised the navigation around five task-oriented categories that matched how analysts actually thought about their work: Explore (ad hoc querying), Monitor (dashboards and alerts), Build (creating new reports), Share (collaboration), and Settings.</p>
+            <p>This reduced the global nav from 340 items to 24, with contextual sub-navigation appearing inline within each section. Tree testing showed an 88% correct navigation rate on the new structure, up from 31% on the original.</p>
+          </div>
+
+          <div class="mockup-frame">
+            <div class="mockup-frame__bar">
+              <div class="mockup-frame__dot" style="background:#FF5F57;"></div>
+              <div class="mockup-frame__dot" style="background:#FFBD2E;"></div>
+              <div class="mockup-frame__dot" style="background:#28C840;"></div>
+              <span style="margin-left:0.75rem;font-size:0.75rem;color:var(--text-3);">Nexus — IA Comparison</span>
+            </div>
+            <div class="mockup-frame__content" style="padding:2rem;background:#F5F3FF;display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+              <!-- Before -->
+              <div>
+                <p style="font-size:0.75rem;font-weight:600;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;">Before — 340 nav items</p>
+                <div style="background:#fff;border:1px solid #FCA5A5;border-radius:10px;padding:1rem;opacity:0.85;">
+                  <div style="display:flex;flex-direction:column;gap:4px;">
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:90%;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:100%;margin-left:12px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:80%;margin-left:24px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:95%;margin-left:36px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:70%;margin-left:48px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:85%;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:100%;margin-left:12px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:90%;margin-left:24px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:75%;margin-left:36px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:65%;margin-left:48px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:55%;margin-left:60px;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:88%;"></div>
+                    <div style="height:7px;background:#FEE2E2;border-radius:3px;width:92%;margin-left:12px;"></div>
+                  </div>
+                  <p style="font-size:0.72rem;color:#DC2626;margin-top:0.75rem;font-weight:500;">7 nesting levels · 31% findability</p>
+                </div>
+              </div>
+              <!-- After -->
+              <div>
+                <p style="font-size:0.75rem;font-weight:600;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;">After — 24 nav items</p>
+                <div style="background:#fff;border:1px solid #A7F3D0;border-radius:10px;padding:1rem;">
+                  <div style="display:flex;flex-direction:column;gap:6px;">
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;background:#FAF5FF;border-radius:6px;">
+                      <div style="width:14px;height:14px;border-radius:4px;background:#8B5CF6;flex-shrink:0;"></div>
+                      <div style="height:6px;background:#DDD6FE;border-radius:3px;flex:1;"></div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;">
+                      <div style="width:14px;height:14px;border-radius:4px;background:#E5E7EB;flex-shrink:0;"></div>
+                      <div style="height:6px;background:#E5E7EB;border-radius:3px;flex:1;"></div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;">
+                      <div style="width:14px;height:14px;border-radius:4px;background:#E5E7EB;flex-shrink:0;"></div>
+                      <div style="height:6px;background:#E5E7EB;border-radius:3px;flex:1;"></div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;">
+                      <div style="width:14px;height:14px;border-radius:4px;background:#E5E7EB;flex-shrink:0;"></div>
+                      <div style="height:6px;background:#E5E7EB;border-radius:3px;flex:1;"></div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;">
+                      <div style="width:14px;height:14px;border-radius:4px;background:#E5E7EB;flex-shrink:0;"></div>
+                      <div style="height:6px;background:#E5E7EB;border-radius:3px;flex:1;"></div>
+                    </div>
+                  </div>
+                  <p style="font-size:0.72rem;color:#059669;margin-top:0.75rem;font-weight:500;">2 nesting levels · 88% findability</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 Component System -->
+        <div class="case-section reveal">
+          <p class="case-section__num">04 — Design System</p>
+          <h2 class="case-section__title">Building the component library</h2>
+          <div class="case-section__body">
+            <p>Before designing screens, I audited the existing UI and identified 140+ unique button variants, 60+ different table styles, and an inconsistent colour system with no documented tokens. The fragmentation was a symptom of the same root cause as the IA problem: no shared design language.</p>
+            <p>I built Nexus Design System (NDS) — a Figma library of 200 components across 15 categories, paired with a token system using semantic naming (e.g., <code style="font-family:monospace;background:var(--bg-alt);padding:0.1em 0.4em;border-radius:4px;font-size:0.85em;">--color-action-primary</code> rather than <code style="font-family:monospace;background:var(--bg-alt);padding:0.1em 0.4em;border-radius:4px;font-size:0.85em;">#8B5CF6</code>). This enabled the engineers to implement theming and dark mode later without design changes.</p>
+          </div>
+
+          <div class="insight-grid">
+            <div class="insight-card">
+              <div class="insight-card__icon">🧩</div>
+              <div class="insight-card__title">200 components</div>
+              <div class="insight-card__text">Built in Figma with variants, auto-layout, and documentation annotations</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">🎨</div>
+              <div class="insight-card__title">Semantic token system</div>
+              <div class="insight-card__text">86 design tokens organised into colour, spacing, typography, and elevation</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">♿</div>
+              <div class="insight-card__title">WCAG AA compliant</div>
+              <div class="insight-card__text">All components meet accessibility contrast ratios and keyboard navigation requirements</div>
+            </div>
+            <div class="insight-card">
+              <div class="insight-card__icon">📘</div>
+              <div class="insight-card__title">Usage documentation</div>
+              <div class="insight-card__text">Every component has a do/don't guide to prevent inconsistent use by other designers</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 Final Design -->
+        <div class="case-section reveal">
+          <p class="case-section__num">05 — Final Design</p>
+          <h2 class="case-section__title">A dashboard analysts want to open</h2>
+          <div class="case-section__body">
+            <p>The redesigned Nexus puts the analyst's current task front and center. A persistent command palette (Cmd+K) lets power users navigate without touching the mouse. Charts use a consistent visual grammar with clear empty states, loading states, and error states — the small things that the original had never gotten right.</p>
+            <p>Most importantly, the most common workflow — loading a saved query, adjusting filters, and exporting results — was reduced from 18 clicks to 5, with keyboard shortcut support throughout.</p>
+          </div>
+
+          <!-- Dashboard mockup -->
+          <div class="mockup-frame">
+            <div class="mockup-frame__bar">
+              <div class="mockup-frame__dot" style="background:#FF5F57;"></div>
+              <div class="mockup-frame__dot" style="background:#FFBD2E;"></div>
+              <div class="mockup-frame__dot" style="background:#28C840;"></div>
+              <span style="margin-left:0.75rem;font-size:0.75rem;color:var(--text-3);">Nexus — Final UI · Analytics Dashboard</span>
+            </div>
+            <div class="mockup-frame__content" style="padding:0;background:#1A1035;min-height:360px;">
+              <div style="display:flex;height:360px;">
+                <!-- Sidebar -->
+                <div style="width:56px;background:#120B2A;border-right:1px solid rgba(255,255,255,0.06);display:flex;flex-direction:column;align-items:center;padding:16px 0;gap:16px;">
+                  <div style="width:28px;height:28px;background:#8B5CF6;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                    <div style="width:14px;height:14px;background:rgba(255,255,255,0.9);border-radius:3px;"></div>
+                  </div>
+                  <div style="width:1px;height:20px;background:rgba(255,255,255,0.1);"></div>
+                  <div style="width:24px;height:24px;background:#2D1B69;border-radius:6px;"></div>
+                  <div style="width:24px;height:24px;background:#8B5CF6;border-radius:6px;"></div>
+                  <div style="width:24px;height:24px;background:#2D1B69;border-radius:6px;"></div>
+                  <div style="width:24px;height:24px;background:#2D1B69;border-radius:6px;"></div>
+                  <div style="width:24px;height:24px;background:#2D1B69;border-radius:6px;"></div>
+                </div>
+                <!-- Main area -->
+                <div style="flex:1;padding:20px;display:flex;flex-direction:column;gap:16px;overflow:hidden;">
+                  <!-- Top bar -->
+                  <div style="display:flex;align-items:center;justify-content:space-between;">
+                    <div>
+                      <p style="font-size:10px;color:rgba(255,255,255,0.4);margin-bottom:2px;">MONITOR</p>
+                      <p style="font-size:13px;font-weight:600;color:#fff;">Revenue Overview</p>
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                      <div style="padding:4px 10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:100px;">
+                        <p style="font-size:9px;color:rgba(255,255,255,0.6);">Last 30 days ▾</p>
+                      </div>
+                      <div style="padding:4px 10px;background:#8B5CF6;border-radius:100px;">
+                        <p style="font-size:9px;color:#fff;font-weight:500;">Export</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- KPI row -->
+                  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;">
+                    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                      <p style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">TOTAL REVENUE</p>
+                      <p style="font-size:14px;font-weight:700;color:#fff;">$2.4M</p>
+                      <p style="font-size:8px;color:#34D399;">↑ 12.4%</p>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                      <p style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">ORDERS</p>
+                      <p style="font-size:14px;font-weight:700;color:#fff;">18,342</p>
+                      <p style="font-size:8px;color:#34D399;">↑ 8.1%</p>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                      <p style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">AVG ORDER</p>
+                      <p style="font-size:14px;font-weight:700;color:#fff;">$130</p>
+                      <p style="font-size:8px;color:#FBBF24;">↔ 0.3%</p>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:12px;">
+                      <p style="font-size:8px;color:rgba(255,255,255,0.4);margin-bottom:4px;">CHURN RATE</p>
+                      <p style="font-size:14px;font-weight:700;color:#fff;">3.2%</p>
+                      <p style="font-size:8px;color:#34D399;">↓ 0.8%</p>
+                    </div>
+                  </div>
+
+                  <!-- Chart + table -->
+                  <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:12px;flex:1;">
+                    <!-- Line chart -->
+                    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px;overflow:hidden;">
+                      <p style="font-size:9px;color:rgba(255,255,255,0.5);margin-bottom:10px;">Revenue trend</p>
+                      <svg viewBox="0 0 300 100" style="width:100%;height:80px;">
+                        <defs>
+                          <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.3"/>
+                            <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <path d="M0 70 L30 65 L60 55 L90 58 L120 45 L150 40 L180 35 L210 30 L240 22 L270 18 L300 12 L300 100 L0 100 Z" fill="url(#chartGrad)"/>
+                        <path d="M0 70 L30 65 L60 55 L90 58 L120 45 L150 40 L180 35 L210 30 L240 22 L270 18 L300 12" stroke="#8B5CF6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </div>
+                    <!-- Top products table -->
+                    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px;">
+                      <p style="font-size:9px;color:rgba(255,255,255,0.5);margin-bottom:10px;">Top categories</p>
+                      <div style="display:flex;flex-direction:column;gap:8px;">
+                        <div>
+                          <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                            <p style="font-size:8px;color:rgba(255,255,255,0.7);">Electronics</p>
+                            <p style="font-size:8px;color:rgba(255,255,255,0.5);">42%</p>
+                          </div>
+                          <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
+                            <div style="width:42%;height:100%;background:#8B5CF6;border-radius:2px;"></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                            <p style="font-size:8px;color:rgba(255,255,255,0.7);">Apparel</p>
+                            <p style="font-size:8px;color:rgba(255,255,255,0.5);">28%</p>
+                          </div>
+                          <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
+                            <div style="width:28%;height:100%;background:#A78BFA;border-radius:2px;"></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                            <p style="font-size:8px;color:rgba(255,255,255,0.7);">Home &amp; Garden</p>
+                            <p style="font-size:8px;color:rgba(255,255,255,0.5);">18%</p>
+                          </div>
+                          <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
+                            <div style="width:18%;height:100%;background:#C4B5FD;border-radius:2px;"></div>
+                          </div>
+                        </div>
+                        <div>
+                          <div style="display:flex;justify-content:space-between;margin-bottom:3px;">
+                            <p style="font-size:8px;color:rgba(255,255,255,0.7);">Other</p>
+                            <p style="font-size:8px;color:rgba(255,255,255,0.5);">12%</p>
+                          </div>
+                          <div style="height:4px;background:rgba(255,255,255,0.1);border-radius:2px;overflow:hidden;">
+                            <div style="width:12%;height:100%;background:#DDD6FE;border-radius:2px;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 Developer Handoff -->
+        <div class="case-section reveal">
+          <p class="case-section__num">06 — Developer Handoff</p>
+          <h2 class="case-section__title">Bridging design and engineering</h2>
+          <div class="case-section__body">
+            <p>With 6 engineers on the team, clear handoff was non-negotiable. I moved beyond "export specs from Figma" and instead ran three structured handoff sessions, walking through each section of the product with the full engineering team before they started building.</p>
+            <p>I documented every interaction state — hover, active, focus, loading, empty, error — in a dedicated Figma file linked to the component library. I also built a lightweight decision log capturing why certain design choices were made, so engineers could make informed trade-offs during implementation without coming back to me for every edge case.</p>
+          </div>
+        </div>
+
+        <!-- 07 Outcomes -->
+        <div class="case-section reveal">
+          <p class="case-section__num">07 — Outcomes</p>
+          <h2 class="case-section__title">Turning detractors into advocates</h2>
+          <div class="case-section__body">
+            <p>The rollout was phased — 10% of analysts in a beta, then 50%, then full. Post-launch metrics were tracked over 60 days, with follow-up qualitative interviews at the 30-day and 90-day marks.</p>
+          </div>
+
+          <div class="insight-grid" style="margin-top:2rem;">
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">⚡</div>
+              <div class="insight-card__title">52% faster task times</div>
+              <div class="insight-card__text">Average time for the primary workflow dropped from 18 min to 8.6 min</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">📊</div>
+              <div class="insight-card__title">−61% Excel exports</div>
+              <div class="insight-card__text">Analysts stopped bypassing the dashboard as the primary analysis tool</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">😊</div>
+              <div class="insight-card__title">CSAT from 24% → 78%</div>
+              <div class="insight-card__text">Satisfaction score at 90-day mark — from bottom quartile to top quartile of internal tools</div>
+            </div>
+            <div class="insight-card" style="border-color:#DDD6FE;background:#FAF5FF;">
+              <div class="insight-card__icon">🏗️</div>
+              <div class="insight-card__title">Design system adopted</div>
+              <div class="insight-card__text">NDS adopted as the standard for 3 other internal tools teams in the same org</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 08 Reflection -->
+        <div class="case-section reveal">
+          <p class="case-section__num">08 — Reflection</p>
+          <h2 class="case-section__title">What makes enterprise UX hard</h2>
+          <div class="case-section__body">
+            <p>Enterprise design taught me that the hardest problems are often organisational, not visual. The Nexus UI was bad because teams had been adding features without a design system or shared governance for years. The design system I built wasn't just a deliverable — it was an attempt to change how the product team operated.</p>
+            <p>The most unexpected challenge was change management with users. Analysts who had built muscle memory around the old (broken) navigation were genuinely frustrated during the transition period, even though the new design objectively outperformed. I learned to build "transition support" — contextual tooltips and a help overlay — into every major navigation change I make now.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Next Project (loop back) -->
+  <a href="project-healthtrack.html" class="next-project">
+    <p class="next-project__label">Back to First Project</p>
+    <p class="next-project__title">HealthTrack Patient Portal <span class="next-project__arrow">→</span></p>
+  </a>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 George Hu. Designed with care.</p>
+      <ul class="footer__links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Dribbble</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

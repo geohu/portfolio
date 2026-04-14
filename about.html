@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — George Hu</title>
+  <meta name="description" content="About George Hu, Principal Product Designer with 8+ years crafting user-centered digital experiences." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-hero {
+      padding: calc(var(--nav-h) + 5rem) var(--px) 4rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 5rem;
+      align-items: start;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 4rem var(--px) 6rem;
+    }
+
+    /* ── Polaroid stack ── */
+    .about-avatar {
+      position: sticky;
+      top: calc(var(--nav-h) + 2rem);
+    }
+
+    .polaroid-stack {
+      position: relative;
+      width: 320px;
+      height: 380px;
+      margin: 0 auto;
+    }
+
+    .polaroid {
+      position: absolute;
+      width: 260px;
+      background: #fff;
+      padding: 12px 12px 46px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.13), 0 1.5px 4px rgba(0,0,0,0.08);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .polaroid img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .polaroid:nth-child(1) { --base-r: -6deg; --tx: -10px; --ty: 8px;  transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); z-index: 1; }
+    .polaroid:nth-child(2) { --base-r:  3deg; --tx:  18px; --ty: -4px; transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); z-index: 2; }
+    .polaroid:nth-child(3) { --base-r: -1deg; --tx:   4px; --ty: 12px; transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); z-index: 3; }
+
+    .polaroid.on-top { box-shadow: 0 16px 48px rgba(0,0,0,0.22); }
+
+    @keyframes wobble {
+      0%   { transform: rotate(var(--base-r))              translate(var(--tx), var(--ty)); }
+      30%  { transform: rotate(calc(var(--base-r) + 5deg)) translate(var(--tx), var(--ty)); }
+      70%  { transform: rotate(calc(var(--base-r) - 5deg)) translate(var(--tx), var(--ty)); }
+      100% { transform: rotate(var(--base-r))              translate(var(--tx), var(--ty)); }
+    }
+
+    .polaroid-stack:hover .polaroid:not(.slide-out):not(.slide-in) {
+      animation: wobble 0.72s ease-in-out 1 forwards;
+    }
+    .polaroid-stack:hover .polaroid:nth-child(2):not(.slide-out):not(.slide-in) { animation-delay: 0.1s; }
+    .polaroid-stack:hover .polaroid:nth-child(3):not(.slide-out):not(.slide-in) { animation-delay: 0.19s; }
+
+    @keyframes slideOut {
+      0%   { transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); }
+      100% { transform: rotate(calc(var(--base-r) - 5deg)) translate(calc(var(--tx) + 140px), calc(var(--ty) + 10px)); }
+    }
+
+    @keyframes slideIn {
+      0%   { transform: rotate(calc(var(--base-r) - 5deg)) translate(calc(var(--tx) + 140px), calc(var(--ty) + 10px)); }
+      100% { transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); }
+    }
+
+    .polaroid.slide-out { animation: slideOut 0.32s cubic-bezier(0.4, 0, 1, 1) forwards !important; }
+    .polaroid.slide-in  { animation: slideIn  0.38s cubic-bezier(0, 0, 0.2, 1) forwards !important; }
+
+    /* ── About text ── */
+    .about__text h2 {
+      margin-bottom: 1.25rem;
+    }
+
+    .about__text p {
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+      max-width: none;
+    }
+
+    .about__skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    /* ── Experience ── */
+    .experience {
+      border-top: 1px solid var(--border);
+      padding-top: 2.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .experience__item {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 2rem;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .experience__meta {
+      padding-top: 0.15rem;
+    }
+
+    .experience__company {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-3);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience__years {
+      font-size: 0.82rem;
+      color: var(--text-3);
+    }
+
+    .experience__role {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience__desc {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-avatar { position: static; }
+      .polaroid-stack { width: 280px; height: 340px; }
+      .experience__item { grid-template-columns: 1fr; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav__logo">George <em>Hu</em></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page header -->
+  <div class="about-hero">
+    <p class="label label--accent reveal">About Me</p>
+    <h1 class="reveal reveal-delay-1">Designing with empathy,<br>shipping with precision.</h1>
+  </div>
+
+  <!-- About grid -->
+  <div class="about-grid">
+
+    <!-- Polaroid stack -->
+    <div class="about-avatar reveal">
+      <div class="polaroid-stack">
+        <div class="polaroid">
+          <img src="assets/thumb-1.jpg" alt="Photo 1" />
+        </div>
+        <div class="polaroid">
+          <img src="assets/thumb-2.png" alt="Photo 2" />
+        </div>
+        <div class="polaroid on-top">
+          <img src="assets/thumb-3.jpg" alt="Photo 3" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Text content -->
+    <div class="about__text reveal reveal-delay-1">
+      <p>
+        I'm George Hu, a Principal Product Designer with over 8 years of experience working across consumer apps, enterprise platforms, and healthcare products. My process is grounded in user research, systems thinking, and close collaboration with engineering and product teams.
+      </p>
+      <p>
+        I believe the best designs are invisible — they get people where they need to go without friction or confusion. Whether I'm running discovery workshops or refining micro-interactions, I'm always working backward from the person using the product.
+      </p>
+      <p>
+        Outside of work I'm interested in typography, film photography, and building small tools that solve personal problems.
+      </p>
+
+      <div class="about__skills">
+        <span class="tag">User Research</span>
+        <span class="tag">UX Strategy</span>
+        <span class="tag">Interaction Design</span>
+        <span class="tag">Prototyping</span>
+        <span class="tag">Design Systems</span>
+        <span class="tag">Figma</span>
+        <span class="tag">Usability Testing</span>
+        <span class="tag">Cross-functional Leadership</span>
+      </div>
+
+      <!-- Experience -->
+      <div class="experience">
+        <p class="label">Experience</p>
+
+        <div class="experience__item">
+          <div class="experience__meta">
+            <p class="experience__company">Acme Corp</p>
+            <p class="experience__years">2021 – Present</p>
+          </div>
+          <div>
+            <p class="experience__role">Principal Product Designer</p>
+            <p class="experience__desc">Leading design across three product lines, managing a team of four designers, and establishing the company's first design system.</p>
+          </div>
+        </div>
+
+        <div class="experience__item">
+          <div class="experience__meta">
+            <p class="experience__company">Studio North</p>
+            <p class="experience__years">2018 – 2021</p>
+          </div>
+          <div>
+            <p class="experience__role">Senior Product Designer</p>
+            <p class="experience__desc">Designed end-to-end experiences for healthcare and fintech clients, from discovery through launch.</p>
+          </div>
+        </div>
+
+        <div class="experience__item">
+          <div class="experience__meta">
+            <p class="experience__company">Freelance</p>
+            <p class="experience__years">2016 – 2018</p>
+          </div>
+          <div>
+            <p class="experience__role">Product Designer</p>
+            <p class="experience__desc">Worked with early-stage startups on mobile apps, brand identity, and growth-focused landing pages.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__text">© 2025 George Hu. Designed with care.</p>
+      <ul class="footer__links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Dribbble</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // ── Nav scroll effect ──────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // ── Scroll Reveal ──────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ── Polaroid stack ────────────────────────────────
+    (function () {
+      const stack = document.querySelector('.polaroid-stack');
+      if (!stack) return;
+      const cards = [...stack.querySelectorAll('.polaroid')];
+      let order = [0, 1, 2];
+      let animating = false;
+      let isHovering = false;
+
+      stack.addEventListener('mouseenter', () => { isHovering = true; });
+      stack.addEventListener('mouseleave', () => { isHovering = false; });
+
+      function applyOrder() {
+        order.forEach((cardIdx, zPos) => {
+          cards[cardIdx].style.zIndex = zPos + 1;
+          cards[cardIdx].classList.toggle('on-top', zPos === order.length - 1);
+        });
+      }
+
+      function restartWobble() {
+        if (!isHovering) return;
+        cards.forEach(card => {
+          card.style.animation = 'none';
+          void card.offsetWidth;
+          card.style.animation = '';
+        });
+      }
+
+      stack.addEventListener('click', () => {
+        if (animating) return;
+        animating = true;
+        const topCard = cards[order[order.length - 1]];
+
+        topCard.classList.add('slide-out');
+        topCard.addEventListener('animationend', () => {
+          topCard.classList.remove('slide-out');
+          order = [order[order.length - 1], ...order.slice(0, -1)];
+          applyOrder();
+          topCard.classList.add('slide-in');
+          topCard.addEventListener('animationend', () => {
+            topCard.classList.remove('slide-in');
+            animating = false;
+            restartWobble();
+          }, { once: true });
+        }, { once: true });
+      });
+    })();
+  </script>
+</body>
+</html>

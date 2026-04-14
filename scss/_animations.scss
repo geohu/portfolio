@@ -1,0 +1,43 @@
+@use 'abstracts' as *;
+// ── Keyframe Animations ────────────────────────────────
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.1); }
+}
+
+@keyframes colorShift {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 100% 0%; }
+  50%  { background-position: 100% 100%; }
+  75%  { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+// ── Polaroid animations ────────────────────────────────
+@keyframes wobble {
+  0%   { transform: rotate(var(--base-r))              translate(var(--tx), var(--ty)); }
+  30%  { transform: rotate(calc(var(--base-r) + 5deg)) translate(var(--tx), var(--ty)); }
+  70%  { transform: rotate(calc(var(--base-r) - 5deg)) translate(var(--tx), var(--ty)); }
+  100% { transform: rotate(var(--base-r))              translate(var(--tx), var(--ty)); }
+}
+
+@keyframes slideOut {
+  0%   { transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); }
+  100% { transform: rotate(calc(var(--base-r) - 5deg)) translate(calc(var(--tx) + 140px), calc(var(--ty) + 10px)); }
+}
+
+@keyframes slideIn {
+  0%   { transform: rotate(calc(var(--base-r) - 5deg)) translate(calc(var(--tx) + 140px), calc(var(--ty) + 10px)); }
+  100% { transform: rotate(var(--base-r)) translate(var(--tx), var(--ty)); }
+}

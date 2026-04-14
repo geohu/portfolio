@@ -1,0 +1,42 @@
+@use 'abstracts' as *;
+// ── Buttons ────────────────────────────────────────────
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: var(--font);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+
+  svg { flex-shrink: 0; }
+
+  &--dark {
+    background: var(--text-1);
+    color: #fff;
+
+    &:hover {
+      background: #222;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--text-1);
+    border: 1.5px solid var(--border-mid);
+
+    &:hover {
+      border-color: var(--text-1);
+      background: var(--text-1);
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@use 'abstracts' as *;
+// ── Navigation ─────────────────────────────────────────
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--px);
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  z-index: 200;
+  transition: box-shadow 0.3s;
+
+  &.scrolled { box-shadow: var(--shadow-sm); }
+
+  &__logo {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+
+    em {
+      font-style: normal;
+      color: var(--accent);
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 2.25rem;
+
+    a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color 0.2s;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 1.5px;
+        background: var(--accent);
+        transition: width 0.25s var(--ease);
+      }
+
+      &:hover,
+      &.active {
+        color: var(--text-1);
+
+        &::after { width: 100%; }
+      }
+    }
+  }
+}

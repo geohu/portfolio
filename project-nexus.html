@@ -5,22 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nexus Dashboard — George Hu</title>
   <meta name="description" content="Case study: Nexus Analytics Dashboard redesign by George Hu." />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .hero-bg { background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 60%, #4C1D95 100%); }
-  </style>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav scrolled" id="nav">
-    <a href="index.html" class="nav__logo">George <em>Hu</em></a>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Work</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <div id="nav-placeholder"></div>
 
   <!-- Hero -->
   <section class="case-hero hero-bg">
@@ -501,23 +491,10 @@
   </a>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <p class="footer__text">© 2026 George Hu</p>
-      <ul class="footer__links">
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
+  <script src="components.js"></script>
   <script>
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
-
     const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {

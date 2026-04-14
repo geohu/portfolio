@@ -1,0 +1,53 @@
+@use 'abstracts' as *;
+// ── Projects Page ──────────────────────────────────────
+
+.work-hero {
+  padding: calc(var(--nav-h) + 5rem) var(--px) 4rem;
+  max-width: calc(var(--max-w) + var(--px) * 2);
+  margin: 0 auto;
+
+  &__label { margin-bottom: 1rem; }
+  h1       { margin-bottom: 1.25rem; }
+  .lead    { margin-bottom: 0; }
+}
+
+// ── Filter bar ────────────────────────────────────────
+.filter-bar {
+  max-width: calc(var(--max-w) + var(--px) * 2);
+  margin: 0 auto;
+  padding: 0 var(--px) 3rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: var(--font);
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text-2);
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--text-1);
+    color: var(--text-1);
+  }
+
+  &.active {
+    background: var(--text-1);
+    border-color: var(--text-1);
+    color: #fff;
+  }
+}
+
+// ── Cards section wrapper ─────────────────────────────
+.cards-section {
+  max-width: calc(var(--max-w) + var(--px) * 2);
+  margin: 0 auto;
+  padding: 0 var(--px) 8rem;
+}

@@ -1,0 +1,5 @@
+// ── Abstracts: variables + mixins ─────────────────────
+// Single file to forward so all partials can @use 'abstracts' with *
+
+@forward 'variables';
+@forward 'mixins';

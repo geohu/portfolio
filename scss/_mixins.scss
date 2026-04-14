@@ -1,0 +1,15 @@
+// ── Breakpoint mixins ─────────────────────────────────
+@mixin tablet  { @media (max-width: 1024px) { @content; } }
+@mixin mobile  { @media (max-width: 768px)  { @content; } }
+@mixin small   { @media (max-width: 480px)  { @content; } }
+
+// ── Project hero gradient ─────────────────────────────
+@mixin project-hero($c1, $c2, $c3) {
+  background: linear-gradient(135deg, $c1 0%, $c2 60%, $c3 100%);
+}
+
+// ── Fade-up entrance ─────────────────────────────────
+@mixin fade-up($delay: 0s, $duration: 0.9s) {
+  opacity: 0;
+  animation: fadeUp $duration var(--ease) $delay forwards;
+}

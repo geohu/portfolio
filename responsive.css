@@ -1,0 +1,121 @@
+/* ======================================================
+   George Hu — Portfolio
+   Responsive Styles (Tablet & Mobile)
+   ====================================================== */
+
+/* ── Tablet (max 1024px) ─────────────────────────────── */
+@media (max-width: 1024px) {
+  :root {
+    --px: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Nav */
+  .nav__links { gap: 1.75rem; }
+
+  /* Hero */
+  .hero__inner { gap: 2.5rem; }
+  .hero__photo { width: 150px; height: 150px; margin-bottom: 0;}
+
+  /* About page */
+  .about-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 3rem;
+  }
+
+  /* Case study */
+  .case-meta__grid { grid-template-columns: repeat(2, 1fr); }
+  .case-meta__item:nth-child(2) { border-right: none; }
+  .case-meta__item:nth-child(3) { border-top: 1px solid var(--border); }
+
+  /* Mini cards */
+  .mini-cards { grid-template-columns: repeat(2, 1fr); }
+
+  /* Projects grid */
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── Mobile (max 768px) ──────────────────────────────── */
+@media (max-width: 768px) {
+  :root {
+    --px: 1.5rem;
+    --nav-h: 60px;
+  }
+
+  /* Nav */
+  .nav { padding: 0 var(--px); }
+  .nav__links { gap: 1.25rem; }
+  .nav__links a { font-size: 0.82rem; }
+
+  /* Hero */
+  .hero__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.75rem;
+    padding-top: var(--nav-h);
+  }
+  .hero__photo { width: 120px; height: 120px; margin-bottom: 0;}
+  .hero__tagline { margin-left: auto; margin-right: auto; }
+  .hero__cta { justify-content: center; }
+
+  /* Scroll hint */
+  .scroll-hint { bottom: 1.5rem; }
+
+  /* Work teaser */
+  .work-teaser__header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .mini-cards { grid-template-columns: 1fr; }
+
+  /* About page */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+  .about-avatar { position: static; }
+  .polaroid-stack { width: 280px; height: 340px; margin: 0 auto; }
+
+  /* Experience */
+  .experience__item { grid-template-columns: 1fr; gap: 0.4rem; }
+
+  /* Projects */
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Case study */
+  .case-hero { padding-top: calc(var(--nav-h) + 3rem); padding-bottom: 3rem; }
+  .case-meta__grid { grid-template-columns: repeat(2, 1fr); }
+  .case-meta__item {
+    padding: 1.25rem 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-meta__item:last-child { border-bottom: none; }
+  .two-col { grid-template-columns: 1fr; gap: 2rem; }
+  .process-steps { gap: 0; }
+
+  /* Footer */
+  .footer__inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}
+
+/* ── Small mobile (max 480px) ────────────────────────── */
+@media (max-width: 480px) {
+  :root { --px: 1.25rem; }
+
+  /* Nav */
+  .nav__logo { font-size: 0.9rem; }
+  .nav__links { gap: 1rem; }
+
+  /* Hero */
+  .hero__photo { width: 100px; height: 100px; margin-bottom: 0;}
+
+  /* Buttons */
+  .btn { padding: 0.65rem 1.25rem; font-size: 0.82rem; }
+
+  /* Case study meta — single column on very small screens */
+  .case-meta__grid { grid-template-columns: 1fr; }
+
+  /* Polaroid stack */
+  .polaroid-stack { width: 240px; height: 300px; }
+  .polaroid { width: 210px; }
+
+  /* Insight grid */
+  .insight-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,94 @@
+@use 'abstracts' as *;
+// ── About Page ─────────────────────────────────────────
+
+.about-hero {
+  padding: calc(var(--nav-h) + 5rem) var(--px) 4rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 5rem;
+  align-items: start;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 4rem var(--px) 6rem;
+}
+
+// Override .about-avatar for sticky positioning on about page
+.about-avatar {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
+
+  // On index.html the avatar is inside the work teaser section — reset sticky
+  .about-strip & {
+    position: relative;
+    top: auto;
+  }
+}
+
+// ── About text ────────────────────────────────────────
+.about__text {
+  h2 { margin-bottom: 1.25rem; }
+
+  p {
+    color: var(--text-2);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    max-width: none;
+  }
+}
+
+.about__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+// ── Experience ────────────────────────────────────────
+.experience {
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+  margin-top: 2.5rem;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  &__meta { padding-top: 0.15rem; }
+
+  &__company {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  &__years {
+    font-size: 0.82rem;
+    color: var(--text-3);
+  }
+
+  &__role {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    color: var(--text-2);
+    line-height: 1.7;
+  }
+}

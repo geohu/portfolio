@@ -5,111 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work — George Hu</title>
   <meta name="description" content="Selected design projects by George Hu — Principal Product Designer." />
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .work-hero {
-      padding: calc(var(--nav-h) + 5rem) var(--px) 4rem;
-      max-width: calc(var(--max-w) + var(--px) * 2);
-      margin: 0 auto;
-    }
-
-    .work-hero__label { margin-bottom: 1rem; }
-
-    .work-hero h1 { margin-bottom: 1.25rem; }
-
-    .work-hero .lead { margin-bottom: 0; }
-
-    /* Filter bar */
-    .filter-bar {
-      max-width: calc(var(--max-w) + var(--px) * 2);
-      margin: 0 auto;
-      padding: 0 var(--px) 3rem;
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .filter-btn {
-      padding: 0.45rem 1rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      font-family: var(--font);
-      border-radius: 100px;
-      border: 1.5px solid var(--border);
-      background: transparent;
-      color: var(--text-2);
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .filter-btn:hover { border-color: var(--text-1); color: var(--text-1); }
-    .filter-btn.active {
-      background: var(--text-1);
-      border-color: var(--text-1);
-      color: #fff;
-    }
-
-    /* Cards grid */
-    .cards-section {
-      max-width: calc(var(--max-w) + var(--px) * 2);
-      margin: 0 auto;
-      padding: 0 var(--px) 8rem;
-    }
-
-    .project-card__cover img,
-    .project-card__cover svg {
-      width: 100%; height: 100%;
-      object-fit: cover;
-    }
-
-    /* Large featured card (first project) */
-    .project-card--featured {
-      grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-    }
-
-    .project-card--featured .project-card__cover {
-      aspect-ratio: unset;
-      min-height: 360px;
-    }
-
-    .project-card--featured .project-card__body {
-      padding: 3rem;
-      justify-content: center;
-    }
-
-    .project-card--featured .project-card__title {
-      font-size: 1.65rem;
-    }
-
-    .project-card--featured .project-card__desc {
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      .project-card--featured {
-        grid-template-columns: 1fr;
-      }
-      .project-card--featured .project-card__cover {
-        min-height: 240px;
-      }
-      .project-card--featured .project-card__body {
-        padding: 1.75rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="main.css" />
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">George <em>Hu</em></a>
-    <ul class="nav__links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="projects.html" class="active">Work</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
+  <div id="nav-placeholder"></div>
 
   <main class="page">
 
@@ -284,23 +185,10 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <p class="footer__text">© 2026 George Hu</p>
-      <ul class="footer__links">
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
+  <script src="components.js"></script>
   <script>
-    // Nav scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 20);
-    }, { passive: true });
 
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');

@@ -1,0 +1,49 @@
+// ── Design Tokens ─────────────────────────────────────
+// Exposed as CSS custom properties so JS can read them.
+// SCSS variables mirror them for use inside SCSS.
+
+$bg:          #FFFFFF;
+$bg-alt:      #F8F8F6;
+$text-1:      #0A0A0A;
+$text-2:      #555555;
+$text-3:      #999999;
+$accent:      #0047FF;
+$accent-dim:  #EEF3FF;
+$border:      #EBEBEB;
+$border-mid:  #CCCCCC;
+
+$shadow-sm:   0 1px 3px rgba(0,0,0,0.06);
+$shadow-md:   0 4px 20px rgba(0,0,0,0.08);
+$shadow-lg:   0 12px 48px rgba(0,0,0,0.12);
+
+$ease:        cubic-bezier(0.16, 1, 0.3, 1);
+$font:        'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+$nav-h:       70px;
+$max-w:       1080px;
+
+// Project accent colours
+$color-healthtrack: #0EA5E9;
+$color-waypoint:    #10B981;
+$color-nexus:       #8B5CF6;
+
+:root {
+  --bg:          #{$bg};
+  --bg-alt:      #{$bg-alt};
+  --text-1:      #{$text-1};
+  --text-2:      #{$text-2};
+  --text-3:      #{$text-3};
+  --accent:      #{$accent};
+  --accent-dim:  #{$accent-dim};
+  --border:      #{$border};
+  --border-mid:  #{$border-mid};
+
+  --font:        #{$font};
+  --nav-h:       #{$nav-h};
+  --max-w:       #{$max-w};
+  --px:          clamp(1.5rem, 5vw, 4rem);
+  --ease:        #{$ease};
+
+  --shadow-sm:   #{$shadow-sm};
+  --shadow-md:   #{$shadow-md};
+  --shadow-lg:   #{$shadow-lg};
+}

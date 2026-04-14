@@ -1,0 +1,152 @@
+@use 'abstracts' as *;
+// ── Home Hero ──────────────────────────────────────────
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 var(--px);
+}
+
+#color-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #f0f4ff, #ffffff, #f5f0ff, #eef6ff);
+  background-size: 400% 400%;
+  animation: colorShift 18s ease infinite;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: var(--max-w);
+  width: 100%;
+}
+
+.hero__photo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  @include fade-up(0.2s, 0.8s);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 1.5rem;
+  @include fade-up(0.3s, 0.8s);
+}
+
+.hero__name {
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--text-1);
+  margin-bottom: 1.75rem;
+  @include fade-up(0.45s);
+
+  .highlight {
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--accent);
+      opacity: 0.18;
+      border-radius: 2px;
+    }
+  }
+}
+
+.hero__tagline {
+  font-size: clamp(0.95rem, 1.75vw, 1.15rem);
+  color: var(--text-2);
+  line-height: 1.75;
+  margin: 0 0 2.5rem;
+  @include fade-up(0.6s);
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  @include fade-up(0.75s);
+}
+
+// ── Scroll hint ───────────────────────────────────────
+.scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0;
+  animation: fadeIn 1s var(--ease) 1.4s forwards;
+
+  &__label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+
+  &__line {
+    width: 1px;
+    height: 32px;
+    background: linear-gradient(to bottom, var(--border-mid), transparent);
+    animation: scrollPulse 2s ease-in-out 2s infinite;
+  }
+}
+
+// ── Work teaser ───────────────────────────────────────
+.work-teaser {
+  padding: 5rem 0 6rem;
+
+  &__header {
+    max-width: var(--max-w);
+    margin: 0 auto 3rem;
+    padding: 0 var(--px);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+}

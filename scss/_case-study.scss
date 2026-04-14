@@ -1,0 +1,318 @@
+@use 'abstracts' as *;
+// ── Case Study Shared Styles ───────────────────────────
+
+// ── Hero ──────────────────────────────────────────────
+.case-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: calc(var(--nav-h) + 5rem) var(--px) 5rem;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+
+    .tag {
+      background: rgba(255,255,255,0.2);
+      border-color: rgba(255,255,255,0.3);
+      color: #fff;
+    }
+  }
+
+  &__title {
+    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    max-width: 18ch;
+  }
+
+  &__summary {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: rgba(255,255,255,0.8);
+    max-width: 52ch;
+    line-height: 1.7;
+  }
+}
+
+// ── Per-project hero backgrounds ─────────────────────
+.hero-bg {
+  &--healthtrack { @include project-hero($color-healthtrack, #0369A1, #075985); }
+  &--waypoint    { @include project-hero($color-waypoint, #047857, #065F46); }
+  &--nexus       { @include project-hero($color-nexus, #6D28D9, #4C1D95); }
+}
+
+// ── Accent helpers per project ────────────────────────
+.accent {
+  &--healthtrack { color: $color-healthtrack; }
+  &--waypoint    { color: $color-waypoint; }
+  &--nexus       { color: $color-nexus; }
+}
+
+.accent-bg {
+  &--healthtrack { background: #F0F9FF; border-color: #BAE6FD; }
+  &--waypoint    { background: #F0FDF4; border-color: #86EFAC; }
+  &--nexus       { background: #F5F3FF; border-color: #C4B5FD; }
+}
+
+// ── Meta strip ────────────────────────────────────────
+.case-meta {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0;
+  }
+
+  &__item {
+    padding: 2rem 2.5rem;
+    border-right: 1px solid var(--border);
+
+    &:last-child { border-right: none; }
+  }
+
+  &__label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 0.4rem;
+  }
+
+  &__value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-1);
+  }
+}
+
+// ── Body ──────────────────────────────────────────────
+.case-body { padding: 5rem 0; }
+
+.case-section {
+  margin-bottom: 5rem;
+
+  &__num {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 0.5rem;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  &__body {
+    font-size: 1rem;
+    color: var(--text-2);
+    line-height: 1.8;
+    max-width: 68ch;
+
+    p + p { margin-top: 1rem; }
+  }
+}
+
+// ── Two-col layout ────────────────────────────────────
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+// ── Insight cards ─────────────────────────────────────
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.insight-card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+
+  &__icon  { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  &__title { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.4rem; }
+  &__text  { font-size: 0.85rem; color: var(--text-2); line-height: 1.6; }
+}
+
+// ── Pull quote ────────────────────────────────────────
+.pull-quote {
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem 2rem;
+  background: var(--accent-dim);
+  border-radius: 0 12px 12px 0;
+  margin: 2.5rem 0;
+
+  p {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-1);
+    max-width: none;
+    line-height: 1.65;
+  }
+
+  cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  // Per-project tints
+  &--healthtrack { border-color: $color-healthtrack; background: #F0F9FF; }
+  &--waypoint    { border-color: $color-waypoint;    background: #F0FDF4; }
+  &--nexus       { border-color: $color-nexus;       background: #F5F3FF; }
+}
+
+// ── Mockup frame ─────────────────────────────────────
+.mockup-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  background: var(--bg-alt);
+  margin: 2.5rem 0;
+
+  &__bar {
+    height: 36px;
+    background: #F0F0EE;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 6px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  &__content {
+    padding: 2rem;
+    min-height: 220px;
+  }
+}
+
+// ── Process steps ─────────────────────────────────────
+.process-steps {
+  display: flex;
+  gap: 0;
+  margin: 2rem 0;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.process-step {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    transform: translateX(50%);
+    z-index: 0;
+  }
+
+  &:last-child::after { display: none; }
+
+  &__num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--text-1);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-2);
+  }
+
+  // Per-project step accent
+  &--healthtrack &__num { background: $color-healthtrack; }
+  &--waypoint    &__num { background: $color-waypoint; }
+  &--nexus       &__num { background: $color-nexus; }
+}
+
+// ── Next project banner ───────────────────────────────
+.next-project {
+  display: block;
+  padding: 4rem var(--px);
+  text-align: center;
+  border-top: 1px solid var(--border);
+  transition: background 0.25s;
+
+  &:hover { background: var(--bg-alt); }
+
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 0.75rem;
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  &__arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.25s var(--ease);
+  }
+
+  &:hover &__arrow { transform: translateX(6px); }
+}

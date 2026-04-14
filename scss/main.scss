@@ -1,0 +1,30 @@
+// ======================================================
+//  George Hu — Portfolio
+//  Main SCSS Entry Point
+// ======================================================
+
+// ── Abstracts (variables + mixins, no CSS output) ─────
+@use 'abstracts' as *;
+
+// ── Base ──────────────────────────────────────────────
+@use 'reset';
+@use 'typography';
+@use 'animations';
+
+// ── Components ────────────────────────────────────────
+@use 'nav';
+@use 'buttons';
+@use 'layout';
+@use 'footer';
+@use 'utilities';
+@use 'polaroid';
+@use 'cards';
+
+// ── Pages ─────────────────────────────────────────────
+@use 'hero';
+@use 'about';
+@use 'projects';
+@use 'case-study';
+
+// ── Responsive ────────────────────────────────────────
+@use 'responsive';

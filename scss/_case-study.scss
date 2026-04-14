@@ -51,20 +51,20 @@
 
 // ── Per-project hero backgrounds ─────────────────────
 .hero-bg {
-  &--healthtrack { @include project-hero($color-healthtrack, #0369A1, #075985); }
+  &--csm { @include project-hero($color-csm, #0369A1, #075985); }
   &--waypoint    { @include project-hero($color-waypoint, #047857, #065F46); }
   &--nexus       { @include project-hero($color-nexus, #6D28D9, #4C1D95); }
 }
 
 // ── Accent helpers per project ────────────────────────
 .accent {
-  &--healthtrack { color: $color-healthtrack; }
+  &--csm { color: $color-csm; }
   &--waypoint    { color: $color-waypoint; }
   &--nexus       { color: $color-nexus; }
 }
 
 .accent-bg {
-  &--healthtrack { background: #F0F9FF; border-color: #BAE6FD; }
+  &--csm { background: #F0F9FF; border-color: #BAE6FD; }
   &--waypoint    { background: #F0FDF4; border-color: #86EFAC; }
   &--nexus       { background: #F5F3FF; border-color: #C4B5FD; }
 }
@@ -190,7 +190,7 @@
   }
 
   // Per-project tints
-  &--healthtrack { border-color: $color-healthtrack; background: #F0F9FF; }
+  &--csm { border-color: $color-csm; background: #F0F9FF; }
   &--waypoint    { border-color: $color-waypoint;    background: #F0FDF4; }
   &--nexus       { border-color: $color-nexus;       background: #F5F3FF; }
 }
@@ -278,7 +278,7 @@
   }
 
   // Per-project step accent
-  &--healthtrack &__num { background: $color-healthtrack; }
+  &--csm &__num { background: $color-csm; }
   &--waypoint    &__num { background: $color-waypoint; }
   &--nexus       &__num { background: $color-nexus; }
 }

@@ -147,9 +147,9 @@
 }
 
 // ── Mini card cover gradients ─────────────────────────
-.mini-card--healthtrack .mini-card__cover,
-.project-cover--healthtrack {
-  background: linear-gradient(135deg, $color-healthtrack 0%, #0369A1 100%);
+.mini-card--csm .mini-card__cover,
+.project-cover--csm {
+  background: linear-gradient(135deg, $color-csm 0%, #0369A1 100%);
 }
 
 .mini-card--waypoint .mini-card__cover,

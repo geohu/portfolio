@@ -184,7 +184,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   padding: 0 var(--px);
-  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
@@ -573,8 +572,8 @@ h3 {
   letter-spacing: -0.015em;
 }
 
-.mini-card--healthtrack .mini-card__cover,
-.project-cover--healthtrack {
+.mini-card--csm .mini-card__cover,
+.project-cover--csm {
   background: linear-gradient(135deg, #0EA5E9 0%, #0369A1 100%);
 }
 
@@ -622,6 +621,7 @@ h3 {
   width: 180px;
   height: 180px;
   border-radius: 50%;
+  margin-bottom: 160px;
   overflow: hidden;
   border: 3px solid #fff;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
@@ -871,10 +871,9 @@ h3 {
 }
 
 .case-hero {
-  min-height: 60vh;
   display: flex;
   align-items: flex-end;
-  padding: calc(var(--nav-h) + 5rem) var(--px) 5rem;
+  padding: calc(var(--nav-h) + 1rem) var(--px) 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -894,26 +893,30 @@ h3 {
 .case-hero__tags .tag {
   background: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3);
-  color: #fff;
+  color:var(--text-1);
 }
 .case-hero__title {
   font-size: clamp(2.25rem, 6vw, 4.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.05;
-  color: #fff;
+  color: var(--text-1);
   margin-bottom: 1.5rem;
   max-width: 18ch;
 }
 .case-hero__summary {
   font-size: clamp(1rem, 1.5vw, 1.15rem);
-  color: rgba(255, 255, 255, 0.8);
-  max-width: 52ch;
+  color: var(--text-1);
   line-height: 1.7;
 }
 
-.hero-bg--healthtrack {
-  background: linear-gradient(135deg, #0EA5E9 0%, #0369A1 60%, #075985 100%);
+.case-hero__summary a {
+  text-decoration: underline;
+    color: #0369A1;
+}
+
+.hero-bg--csm {
+  background: #F3F5FF;
 }
 .hero-bg--waypoint {
   background: linear-gradient(135deg, #10B981 0%, #047857 60%, #065F46 100%);
@@ -922,7 +925,7 @@ h3 {
   background: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 60%, #4C1D95 100%);
 }
 
-.accent--healthtrack {
+.accent--csm {
   color: #0EA5E9;
 }
 .accent--waypoint {
@@ -932,7 +935,7 @@ h3 {
   color: #8B5CF6;
 }
 
-.accent-bg--healthtrack {
+.accent-bg--csm {
   background: #F0F9FF;
   border-color: #BAE6FD;
 }
@@ -1065,7 +1068,7 @@ h3 {
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-.pull-quote--healthtrack {
+.pull-quote--csm {
   border-color: #0EA5E9;
   background: #F0F9FF;
 }
@@ -1153,7 +1156,7 @@ h3 {
   font-weight: 500;
   color: var(--text-2);
 }
-.process-step--healthtrack .process-step__num {
+.process-step--csm .process-step__num {
   background: #0EA5E9;
 }
 .process-step--waypoint .process-step__num {
@@ -1195,6 +1198,11 @@ h3 {
   transform: translateX(6px);
 }
 
+.demo-video {
+ margin: 20px 0;
+
+}
+
 @media (max-width: 1024px) {
   :root {
     --px: clamp(1.5rem, 4vw, 3rem);
@@ -1208,6 +1216,7 @@ h3 {
   .hero__photo {
     width: 150px;
     height: 150px;
+    margin-bottom: 0;
   }
   .about-grid {
     grid-template-columns: 1fr 1.4fr;

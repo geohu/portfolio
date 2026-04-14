@@ -9,7 +9,7 @@
     '':                       'index',
     'projects.html':          'projects',
     'about.html':             'about',
-    'project-healthtrack.html': 'projects',
+    'project-csm.html': 'projects',
     'project-nexus.html':     'projects',
     'project-waypoint.html':  'projects',
   };

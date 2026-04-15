@@ -9,6 +9,9 @@
   justify-content: space-between;
   padding: 0 var(--px);
   border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 200;
   transition: box-shadow 0.3s;
 

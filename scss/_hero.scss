@@ -135,6 +135,58 @@
   }
 }
 
+// ── Tools strip ──────────────────────────────────────
+.tools-strip {
+  padding: 3rem var(--px);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+
+  &__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    white-space: nowrap;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-2);
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
 // ── Work teaser ───────────────────────────────────────
 .work-teaser {
   padding: 5rem 0 6rem;

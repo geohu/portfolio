@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Management — George Hu</title>
+  <meta name="description" content="Case study: Order Management designed by George Hu." />
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <div id="nav-placeholder"></div>
+
+  <!-- Demo Video -->
+  <div style="background:#fff;padding-top:var(--nav-h);">
+    <div style="max-width:900px;margin:3rem auto;padding:0 var(--px);">
+      <video
+        src="assets/k25-demo.mp4"
+        autoplay
+        loop
+        muted
+        playsinline
+        style="width:100%;display:block;"
+      ></video>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="case-hero hero-bg--waypoint">
+    <div class="case-hero__content container">
+      <div class="case-hero__tags">
+        <span class="tag" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:#fff;">ServiceNow &#x2022; CRM</span>
+  
+      </div>
+      <h1 class="case-hero__title">Sales & Order Management</h1>
+      <p class="case-hero__summary">
+      Sales & Order Management represents ServiceNow's strategic entry into the CRM market, bridging the gap between the sales process — from leads and opportunities — and the service side of the CRM lifecycle, creating a seamless, end-to-end customer experience. 
+      </p>
+    </div>
+  </section>
+
+  <!-- Meta -->
+  <div class="case-meta">
+    <div class="container">
+      <div class="case-meta__grid">
+        <div class="case-meta__item">
+          <p class="case-meta__label">My Role</p>
+          <p class="case-meta__value">UX Architect</p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Timeline</p>
+          <p class="case-meta__value">Nov 2022 – Nov 2025 </p>
+        </div>
+        <div class="case-meta__item">
+          <p class="case-meta__label">Tools</p>
+          <p class="case-meta__value">Figma</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Body -->
+  <main class="case-body">
+    <div class="container">
+      <div style="max-width:var(--max-w);margin:0 auto;">
+
+        
+        <!-- Design Process -->
+        <div class="case-section reveal">
+          <h2 class="case-section__title">My Role and Contributions</h2>
+<div class="case-section">
+<p>As Design Architect, I played a pivotal role in launching the initial Sales & Order Management product and driving its evolution into a competitive, market-ready solution.</p>
+</div>
+
+
+<!-- Design -->
+        <div class="case-section reveal">
+          <p class="case-section__num">Design & Craft</p>
+          <h2 class="case-section__title">Designing for the foundation</h2>
+          <div class="two-col">
+            <div class="case-section__body">
+              <p>Designing for Sales & Order Management requires close collaboration with related teams, as workflows are interconnected. To scale for solutions, our design systems and components are extended and built from a shared library.</p>
+              <p>As design lead, I ensured our design architecture and patterns work for the system, and scales across teams.</p>
+             
+            </div>
+            <div>
+              <img src="assets/som-figma-library.png" alt="SOM Figma Library" style="width:100%;display:block;border-radius:8px;margin-top:1rem;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Conference -->
+        <div class="case-section reveal">
+          <p class="case-section__num">Keynote</p>
+          <h2 class="case-section__title">Knowledge 2025 CRM Main Keynote</h2>
+          <div class="two-col">
+            <div class="case-section__body">
+              <p>The <a href="https://www.servicenow.com/events/knowledge/2025/sessions/solution-keynote--crm.html" target="_blank">Knowledge CRM keynote</a> featured a flagship product demo that I conceived and led, highlighting the platform's core capabilities and debuting the integration of <a href="https://www.servicenow.com/products/cpq.html" target="_blank">Logik</a>, ServiceNow's newest acquisition.</p>
+             
+            </div>
+            <div>
+              <div style="aspect-ratio:1726/1040;overflow:hidden;border-radius:8px;">
+                <img src="assets/som-k26.png" alt="Knowledge 2025 CRM Keynote" style="width:100%;height:100%;object-fit:cover;display:block;" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </main>
+
+  
+  <!-- Next Project -->
+  <a href="project-csm.html" class="next-project next-project--back">
+    <p class="next-project__label">Back</p>
+    <p class="next-project__title"><span class="next-project__arrow">←</span> AI Assisted Customer Service</p>
+  </a>
+
+ 
+
+
+
+
+
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script>
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

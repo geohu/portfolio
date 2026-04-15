@@ -315,4 +315,12 @@
   }
 
   &:hover &__arrow { transform: translateX(6px); }
+
+  &--back {
+    .next-project__arrow {
+      margin-left: 0;
+      margin-right: 0.5rem;
+    }
+    &:hover .next-project__arrow { transform: translateX(-6px); }
+  }
 }

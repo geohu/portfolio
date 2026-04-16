@@ -3,10 +3,9 @@
 
 // ── Hero ──────────────────────────────────────────────
 .case-hero {
-  min-height: 60vh;
   display: flex;
   align-items: flex-end;
-  padding: calc(var(--nav-h) + 5rem) var(--px) 5rem;
+  padding: calc(var(--nav-h) + 1rem) var(--px) 5rem;
   position: relative;
   overflow: hidden;
 
@@ -38,13 +37,11 @@
     line-height: 1.05;
     color: #fff;
     margin-bottom: 1.5rem;
-    max-width: 18ch;
   }
 
   &__summary {
     font-size: clamp(1rem, 1.5vw, 1.15rem);
     color: rgba(255,255,255,0.8);
-    max-width: 52ch;
     line-height: 1.7;
   }
 }

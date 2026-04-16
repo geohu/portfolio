@@ -8,7 +8,7 @@
   .nav__links { gap: 1.75rem; }
 
   .hero__inner { gap: 2.5rem; }
-  .hero__photo { width: 150px; height: 150px; }
+  .hero__photo { width: 150px; height: 150px; margin-bottom: 0; }
 
   .about-grid { grid-template-columns: 1fr 1.4fr; gap: 3rem; }
 
@@ -39,7 +39,7 @@
     gap: 1.75rem;
     padding-top: var(--nav-h);
   }
-  .hero__photo   { width: 120px; height: 120px; }
+  .hero__photo   { width: 120px; height: 120px; margin-bottom: 0; }
   .hero__tagline { margin-left: auto; margin-right: auto; }
   .hero__cta     { justify-content: center; }
   .scroll-hint   { bottom: 1.5rem; }
@@ -92,7 +92,7 @@
   .nav__logo   { font-size: 0.9rem; }
   .nav__links  { gap: 1rem; }
 
-  .hero__photo { width: 100px; height: 100px; }
+  .hero__photo { width: 100px; height: 100px; margin-bottom: 0; }
 
   .btn { padding: 0.65rem 1.25rem; font-size: 0.82rem; }
 

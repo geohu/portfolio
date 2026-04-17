@@ -18,6 +18,15 @@
 
   .mini-cards         { grid-template-columns: repeat(2, 1fr); }
   .projects-grid      { grid-template-columns: repeat(2, 1fr); }
+
+  .tools-strip__inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .tools-strip__label {
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--text-1);
+  }
 }
 
 // ── Mobile (≤768px) ───────────────────────────────────
@@ -43,6 +52,16 @@
   .hero__tagline { margin-left: auto; margin-right: auto; }
   .hero__cta     { justify-content: center; }
   .scroll-hint   { bottom: 1.5rem; }
+
+  // Tools strip
+  .tools-strip__inner { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .tools-strip__label {
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--text-1);
+  }
 
   // Work teaser
   .work-teaser__header { flex-direction: column; align-items: flex-start; gap: 1rem; }

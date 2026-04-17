@@ -1282,6 +1282,18 @@ h3 {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .tools-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .tools-strip__label {
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--text-1);
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -1317,6 +1329,18 @@ h3 {
   }
   .scroll-hint {
     bottom: 1.5rem;
+  }
+  .tools-strip__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .tools-strip__label {
+    font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    text-transform: none;
+    color: var(--text-1);
   }
   .work-teaser__header {
     flex-direction: column;
